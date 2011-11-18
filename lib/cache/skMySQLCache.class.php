@@ -187,7 +187,7 @@ class skMySQLCache extends sfCache
 
 		// execute the statement
 		$return = $this->stmt['removePattern']->execute(array(
-			':like'   => patternToLike($pattern),
+			':like'   => $this->patternToLike($pattern),
 			':regexp' => $this->patternToRegexp($pattern),
 		));
 		$this->stmt['removePattern']->closeCursor();
