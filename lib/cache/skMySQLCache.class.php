@@ -48,7 +48,7 @@ class skMySQLCache extends sfCache
 		parent::initialize($options);
 
 		// ensure a database connection is specified
-		if (!$this->getOption('database') || !$this->getOption('dsn')) {
+		if (!$this->getOption('database') && !$this->getOption('dsn')) {
 			throw new sfInitializationException('You must pass a "database" or "dsn" option to initialize a skMySQLCache object.');
 		}
 	}
