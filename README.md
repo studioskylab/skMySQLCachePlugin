@@ -14,11 +14,11 @@ The available parameters are as follows:
 
 * All parameters available to `sfCache`
 * When using a Doctrine connection:
-** `database` — Doctrine connection name as specified in your `databases.yml`
+    * `database` — Doctrine connection name as specified in your `databases.yml`
 * When specifying connection details:
-** `dsn` — PDO-compatible DSN string
-** `username`
-** `password`
+    * `dsn` — PDO-compatible DSN string
+    * `username`
+    * `password`
 * `table` — Table name for the cache (defaults to `cache`)
 
 Example configuration:
