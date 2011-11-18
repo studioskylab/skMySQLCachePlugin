@@ -211,7 +211,7 @@ class skMySQLCache extends sfCache
 			$params = array();
 		} else {
 			if (!isset($this->stmt['clean'])) {
-				$this->stmt['cleanall'] = $this->getConnection()->prepare('DELETE FROM `' . $this->getOption('table') . '` WHERE `timeout` < :timeout');
+				$this->stmt['clean'] = $this->getConnection()->prepare('DELETE FROM `' . $this->getOption('table') . '` WHERE `timeout` < :timeout');
 			}
 
 			$stmt   = $this->stmt['clean'];
